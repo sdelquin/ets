@@ -5,6 +5,7 @@
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{pifont}
+\usepackage{makecell}
 
 \setbeamertemplate{navigation symbols}{}
 
@@ -15,7 +16,7 @@
   \href{#1}{\textcolor{blue}{\underline{\smash{#2}}}}%
 }
 
-\title{Programación}
+\title{Entornos de desarrollo}
 \subtitle{Desarrollo de Aplicaciones Web}
 \author{Sergio Delgado Quintero}
 \institute{IES Puerto de la Cruz - Telesforo Bravo}
@@ -48,12 +49,20 @@
 \begin{frame}{Módulo: Entornos de desarrollo}
     \begin{itemize}
         \item Primer curso del CFGS Desarrollo de Aplicaciones Web.
+        \item Modalidad \textbf{semipresencial}.
         \item Tutorías:
         \begin{itemize}
-            \item 
+            \item Obligatorias \underline{\smash{presenciales}} \textbf{Miércoles}:
+            \begin{itemize}
+                \item Grupo A $\rightarrow$ 20:00 - 22:30 (Aula 108)
+                \item Grupo B $\rightarrow$ 17:15 - 19:45 (Aula COM1)
+            \end{itemize}
+            \item Voluntarias \underline{\smash{telemáticas}} \textbf{Lunes}:
+            \begin{itemize}
+                \item Grupo A $\rightarrow$ 20:00 - 22:30
+                \item Grupo B $\rightarrow$ 17:15 - 19:45
+            \end{itemize}
         \end{itemize}
-        \item 2.5 horas semanales (tutorías obligatorias presenciales).
-        \item Tutorías voluntarias online.
         \item Aula virtual CAMPUS: \link[https://peq.es/ets]{peq.es/ets}
         \item Máquina virtual: \textbf{VirtualBox}.
     \end{itemize}
@@ -62,77 +71,33 @@
 \section{Sistema de evaluación}
 \begin{frame}{Instrumentos de evaluación}
     \begin{itemize}
-        \item Pruebas objetivas [PO] (\textbf{70\%})
-        \begin{itemize}
-            \item Pruebas objetivas teóricas [POT] (\textbf{25\%})
-            \item Pruebas objetivas prácticas [POP] (\textbf{75\%})\footnote{Es necesario superar para realizar media.}
-        \end{itemize}
-        \item Tareas evaluables [TE] (\textbf{40\%})
-        \begin{itemize}
-            \item Tareas evaluables: Ejercicios [TEE] (\textbf{50\%})
-            \item Tareas evaluables: Proyectos [TEP] (\textbf{50\%})\footnote{Se realizará por grupos.}
-        \end{itemize}
+        \item Pruebas objetivas [PO] (\textbf{60\%}) $\rightarrow$ Habrá una única prueba al finalizar el módulo.
+        \item Tareas evaluables [TE] (\textbf{40\%}) $\rightarrow$ Habrá una única tarea al finalizar el módulo
     \end{itemize}
 
-    \fbox{\tiny POP/TEP \ding{43} $0.7 * \text{tests} + 0.3 * \text{código}$}
-
     \begin{block}{\tiny{Cálculo de la nota}}
-        \vspace{-2em}
-        \begin{align*}
-        N_{ev} =\ & 0.60 * (0.25 * POT + 0.75 * POP) +\\
-                & 0.40 * (0.5 * TEE + 0.5 * TEP)
-        \end{align*}
-        \vspace{-2em}
-    \end{block}
-\end{frame}
-
-\begin{frame}{Criterios de calificación}
-    \begin{tabular}{|l|l|l|l|}
-        \hline
-        & 1ª Evaluación & 2ª Evaluación & 3ª Evaluación\\
-        \hline
-        1ª Evaluación & 100\% & - & -\\
-        \hline
-        2ª Evaluación & 30\%  & 70\% & -\\
-        \hline
-        3ª Evaluación & 20\%  & 20\% & 60\%\\
-        \hline
-    \end{tabular}\\[1em]
-
-    \begin{block}{\tiny{Cálculo de la nota}}
-        \vspace{-1.5em}
-        \begin{align*}
-            N_1 &= N_{ev}\\
-            N_2 &= 0.3 * N_1 + 0.7 * N_{ev}\\
-            N_3 &= 0.2 * N_1 + 0.2 * N_2 + 0.6 * N_{ev}
-        \end{align*}
+        \vspace{-1em}
+        \begin{equation*}
+        N = 0.60 * PO + 0.40 * TE
+        \end{equation*}
     \end{block}
 \end{frame}
 
 \begin{frame}{Resultados de aprendizaje}
     \framesubtitle{$[RA1-RA3]$}
     \begin{itemize}
-        \item \textbf{RA1}: Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.
-        \item \textbf{RA2}: Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.
-        \item \textbf{RA3}: Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.
+        \item \textbf{RA1}: Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático, analizando sus característicasy la fases en las que actúan hasta llegar a su puesta en funcionamiento.
+        \item \textbf{RA2}: Evalúa entornos integrados de desarrollo analizando sus características para editar código fuente y generar ejecutables.
+        \item \textbf{RA3}: Verifica el funcionamiento de programas diseñando y realizando pruebas.
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Resultados de aprendizaje}
     \framesubtitle{$[RA4-RA6]$}
     \begin{itemize}
-        \item \textbf{RA4}: Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.
-        \item \textbf{RA5}: Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.
-        \item \textbf{RA6}: Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Resultados de aprendizaje}
-    \framesubtitle{$[RA7-RA9]$}
-    \begin{itemize}
-        \item \textbf{RA7}: Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.
-        \item \textbf{RA8}: Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información.
-        \item \textbf{RA9}: Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos.
+        \item \textbf{RA4}: Optimiza código empleando las herramientas disponibles en el entorno de desarrollo.
+        \item \textbf{RA5}: Genera diagramas de clases valorando su importancia en el desarrollo de aplicaciones y empleando herramientas específicas.
+        \item \textbf{RA6}: Genera diagramas de comportamiento valorando su importancia en el desarrollo de aplicaciones y empleando herramientas específicas.
     \end{itemize}
 \end{frame}
 
@@ -141,25 +106,17 @@
 \begin{frame}{Secuenciación}
     \begin{tabular}{|l|l|l|}
         \hline
-        \textbf{Unidad} & \textbf{Nombre} & \textbf{Trimestre}\\
+        \textbf{Unidad} & \textbf{Nombre} & \textbf{Sesión}\\
         \hline
-        UT1 & Introducción a la programación & \textcolor{purple}{T1}\\
+        UT1 & Desarrollo de un programa informático & \textcolor{purple}{S1}\\
         \hline
-        UT2 & Tipos de datos & \textcolor{purple}{T1}\\
+        UT2 & Entornos integrados de desarrollo & \textcolor{purple}{S1/S2/S3}\\
         \hline
-        UT3 & Control de flujo & \textcolor{purple}{T1}\\
+        UT3 & Pruebas de software & \textcolor{purple}{S3/S4}\\
         \hline
+        UT4 & Flujos de trabajo en entornos de desarrollo& \textcolor{purple}{S4/S5}\\
         \hline
-        UT4 & Estructuras de datos I & \textcolor{teal}{T2}\\
-        \hline
-        UT5 & Estructuras de datos II & \textcolor{teal}{T2}\\
-        \hline
-        UT6 & Funciones & \textcolor{teal}{T2}\\
-        \hline
-        \hline
-        UT7 & Programación orientada a objetos & \textcolor{orange}{T3}\\
-        \hline
-        UT8 & Librerías & \textcolor{orange}{T3}\\
+        UT5 & Diagramas & \textcolor{purple}{S5}\\
         \hline
     \end{tabular}
 \end{frame}
@@ -167,49 +124,19 @@
 \begin{frame}{Relación UT/RA}
     \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
         \hline
-            & UT1  & UT2  & UT3  & UT4  & UT5   & UT6  & UT7   & UT8\\
+            & UT1  & UT2  & UT3  & UT4  & UT5\\
         \hline
-        RA1 & 10\% & 80\% & 10\% &      &       &      &       & \\
+        RA1 & 100\% &  &  & & \\
         \hline
-        RA2 &      &      &      &      &       & 50\% & 50\%  & \\
+        RA2 & &  100\% &  & & \\
         \hline
-        RA3 &      &      & 90\% &      &       &      & 10\%  & \\
+        RA3 & &  & 100\%  & & \\
         \hline
-        RA4 &      &      &      &      &       &      & 100\% & \\
+        RA4 & &  & & 100\% & \\
         \hline
-        RA5 &      &      &      &      & 100\% &      &       & \\
+        RA5 & &  & & & 100\% \\
         \hline
-        RA6 &      &      &      & 50\% & 40\%  &      &       &10\% \\
-        \hline
-        RA7 &      &      &      &      &       &      & 100\% & \\
-        \hline
-        RA8 &      &      &      &      &       &      &  & 100\% \\
-        \hline
-        RA9 &      &      &      &      &       &      &  & 100\% \\
-        \hline
-    \end{tabular}
-\end{frame}
-
-\begin{frame}{Entregables}
-    \begin{tabular}{|l|l|l|l|l|}
-        \hline
-            & POT       & POP      & TEE       & TEP\\
-        \hline
-        UT1 & \ding{51} &          &           &\\
-        \hline
-        UT2 & \ding{51} &\ding{51} &           &\\
-        \hline
-        UT3 & \ding{51} &\ding{51} & \ding{51} & \ding{51}\\
-        \hline
-        UT4 & \ding{51} &\ding{51} &           & \\
-        \hline
-        UT5 & \ding{51} &\ding{51} &           & \\
-        \hline
-        UT6 & \ding{51} &\ding{51} & \ding{51} & \ding{51}\\
-        \hline
-        UT7 & \ding{51} &\ding{51} &           & \\
-        \hline
-        UT8 & \ding{51} &\ding{51} & \ding{51} & \\
+        RA6 & &  & & & 100\% \\
         \hline
     \end{tabular}
 \end{frame}
@@ -241,21 +168,40 @@
         \hline
          & Lunes & Martes & Miércoles & Jueves & Viernes\\
         \hline        
-        14:30 - 15:25 & & & & &\\
+        17:15-19:45 &
+        \makecell{
+            {\scriptsize \textcolor{teal}{\textbf{TVT}}\footnotemark[1]}\\
+            {\scriptsize Grupo B}\\
+            {\scriptsize Remoto}
+        } &
+        &
+        \makecell{
+            {\scriptsize \textcolor{teal}{\textbf{TOP}}\footnotemark[2]}\\
+            {\scriptsize Grupo B}\\
+            {\scriptsize Aula 108}
+        } &
+        &\\
         \hline
-        15:25 - 16:20 & & & & \textcolor{purple}{PRO} &\\
+        19:45-20:00 & {\tiny Recreo} & {\tiny Recreo} & {\tiny Recreo} & {\tiny Recreo} & {\tiny Recreo}\\
         \hline
-        16:20 - 17:15 & & & & \textcolor{purple}{PRO} &\\
-        \hline
-        17:15 - 17:45 & {\tiny Recreo} & {\tiny Recreo} & {\tiny Recreo} & {\tiny Recreo} & {\tiny Recreo}\\
-        \hline
-        17:45 - 18:40 & & & & &\\
-        \hline
-        18:40 - 19:35 & & \textcolor{purple}{PRO} & \textcolor{purple}{PRO} & &\\
-        \hline
-        19:35 - 20:30 & & \textcolor{purple}{PRO} & \textcolor{purple}{PRO} & &\\
+        20:00-22:30 &
+        \makecell{
+            {\scriptsize \textcolor{teal}{\textbf{TVT}}\footnotemark[1]}\\
+            {\scriptsize Grupo A}\\
+            {\scriptsize Remoto}
+        } &
+        &
+        \makecell{
+            {\scriptsize \textcolor{teal}{\textbf{TOP}}\footnotemark[2]}\\
+            {\scriptsize Grupo A}\\
+            {\scriptsize Aula COM1}
+        } &
+        &\\
         \hline
     \end{tabular}
+
+    \footnotetext[1]{Tutoría Voluntaria Telemática}
+    \footnotetext[2]{Tutoría Obligatoria Presencial}
 \end{frame}
 
 \begin{frame}{IA}
