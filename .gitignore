@@ -1,5 +1,6 @@
 .python-version
 .artwork
+sandbox
 .DS_Store
 *.pyc
 node_modules
